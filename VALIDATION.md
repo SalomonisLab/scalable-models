@@ -38,3 +38,14 @@ has not been performed.
   catalog snapshots. Git-backed default history now contains 12 repository intervals.
 - The release manifests contain recorded training rosters and authorizations. Their
   statements are reported as source evidence, not as a new scientific approval.
+
+
+## Modality/version organization
+
+- 22 registry/versioning tests passed, including readable result labels, version folder
+  generation and rejection of conflicting version assignments.
+- All 12 pre-existing saved-artifact identities and hashes, all 27 default contexts,
+  and archived catalogs were retained. No model, sample roster or feature panel changed.
+- Models are grouped under 5 modalities with v1.0/v1.1 directories and tissue/species
+  variants. Seven matching modality/version releases distribute the registered assets.
+- Proposal metadata now requires explicit modality, readable version and variant.
