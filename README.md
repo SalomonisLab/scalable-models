@@ -2,7 +2,7 @@
 
 This repository records model discovery, community proposals, and reviewed default history. It contains metadata, not executable community payloads.
 The runtime catalog is packaged in `altanalyze3.components.model_registry/catalog.json`.
-Repository: https://github.com/nsalomonis/scalable-models (private).
+Repository: https://github.com/SalomonisLab/scalable-models (private).
 
 ## IDs recorded in results
 
