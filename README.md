@@ -1,6 +1,7 @@
 # AltAnalyze3 / scALABLE model repository
 
-This repository records model discovery, community proposals, and reviewed default history. It contains metadata, not executable community payloads.
+This repository records model discovery, community proposals, and reviewed default history. It contains metadata and reviewed release manifests. The private GitHub release also
+hosts model bundles; community proposals are validated without executing their payloads.
 The runtime catalog is packaged in `altanalyze3.components.model_registry/catalog.json`.
 Repository: https://github.com/SalomonisLab/scalable-models (private).
 
@@ -25,6 +26,21 @@ metadata. Imputed H5AD prediction summaries also contain the IDs. The standalone
 scALABLE viewer preserves supplied prediction IDs in its bundle metadata and manifest. Old results without
 these records have unknown versions; do not assign the current default retrospectively.
 
+## Latest registry release
+
+[`registry-2026.10.06.1`](https://github.com/SalomonisLab/scalable-models/releases/tag/registry-2026.10.06.1)
+versions the latest lung lipid and AML metabolite default selections, their model bundles,
+and the current scALABLE downstream method code. See
+[release notes](releases/registry-2026.10.06.1/NOTES.md) and machine-readable
+[changes](releases/registry-2026.10.06.1/update.json). The catalog includes 10 current
+artifact versions and 2 historical versions; 27 default selections remain represented.
+
+`inference_versions` retains code variants for an unchanged saved artifact. Complete
+catalogs are archived under `snapshots/`, named by the SHA-256 of canonical JSON.
+`application_method_version_id` separately records the scALABLE conversion,
+aggregation, fold and differential code in run manifests. Older snapshots without this
+field retain an unknown downstream method identity.
+
 ## Current defaults and time frames
 
 `catalog.json` records the actual bytes selected by the current working tree as observed
@@ -45,8 +61,9 @@ python -m altanalyze3.components.model_registry.snapshot
 python -m altanalyze3.components.model_registry.history
 ```
 
-The snapshot command is a maintenance operation: inspect its diff, then release matching
-catalog copies together. It never changes a default. Default history should also record
+The snapshot command preserves historical artifact IDs and inference versions, and
+archives complete catalogs before and after a refresh. Inspect its diff, then release
+matching catalog copies together. It never changes a default. Default history should also record
 actual deployment events when maintainers can supply that evidence.
 
 ## Methods and model cards
