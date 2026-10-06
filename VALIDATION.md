@@ -42,7 +42,7 @@ has not been performed.
 
 ## Modality/version organization
 
-- 22 registry/versioning tests passed, including readable result labels, version folder
+- 23 registry/versioning tests passed, including readable result labels, version folder
   generation and rejection of conflicting version assignments.
 - All 12 pre-existing saved-artifact identities and hashes, all 27 default contexts,
   and archived catalogs were retained. No model, sample roster or feature panel changed.
